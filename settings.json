@@ -1,0 +1,65 @@
+{
+    "video_processing": {
+        "intro_duration": 3,
+        "outro_duration": 3,
+        "min_video_duration": 6,
+        "max_concurrent_processes": 1,
+        "temp_dir": "temp"
+    },
+    "logo_configuration": {
+        "static_logo": {
+            "height": 100,
+            "position": [20, 20],
+            "opacity": 1.0,
+            "scale_factor": 1.0
+        },
+        "animated_logo": {
+            "height": 100,
+            "position": "center",
+            "bottom_margin": 120,
+            "opacity": 1.0,
+            "scale_factor": 1.0
+        }
+    },
+    "output_settings": {
+        "video_codec": "libx264",
+        "audio_codec": "aac",
+        "preset": "medium",
+        "crf": 23,
+        "bitrate": null,
+        "audio_bitrate": "128k",
+        "fps": null,
+        "resolution": null,
+        "format": "mp4"
+    },
+    "quality_settings": {
+        "enable_hardware_acceleration": false,
+        "gpu_codec": "h264_nvenc",
+        "threads": 0,
+        "buffer_size": "2M",
+        "maxrate": null,
+        "bufsize": null
+    },
+    "performance_settings": {
+        "memory_limit_mb": 2048,
+        "enable_progress_bar": true,
+        "cleanup_temp_files": true,
+        "parallel_processing": false,
+        "chunk_size_seconds": 30
+    },
+    "file_management": {
+        "auto_delete_processed": false,
+        "keep_original_audio": true,
+        "backup_original": false,
+        "output_naming": "timestamp",
+        "max_output_files": 100
+    },
+    "advanced_settings": {
+        "enable_debug_logging": false,
+        "log_level": "INFO",
+        "save_processing_logs": true,
+        "validate_output": true,
+        "retry_failed_processing": true,
+        "max_retry_attempts": 3
+    }
+}
