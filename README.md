@@ -57,7 +57,7 @@ Download from [FFmpeg official website](https://ffmpeg.org/download.html)
 ### 3. Prepare Assets
 
 Ensure you have the following files in the `assets/` folder:
-- `static_logo.jpeg` - Static logo image for top-left positioning
+- `static_logo.png` - Static logo image for top-left positioning (PNG with transparency)
 - `video_logo.mp4` - Animated logo video for bottom-center positioning
 
 ### 4. Configure Settings
@@ -190,12 +190,14 @@ VideoEditor/
 ### Logo Configuration
 
 #### Static Logo
+- `file`: Path to the static logo image (default: `assets/static_logo.png`)
 - `height`: Logo height in pixels
 - `position`: [x, y] coordinates from top-left
 - `opacity`: Transparency level (0.0-1.0)
 - `scale_factor`: Size multiplier
 
 #### Animated Logo
+- `file`: Path to the animated logo video (default: `assets/video_logo.mp4`)
 - `height`: Logo height in pixels
 - `position`: "center" or [x, y] coordinates
 - `bottom_margin`: Distance from bottom edge
@@ -315,7 +317,7 @@ All processing information is saved to `video_processor.log`:
 ### Common Issues
 
 1. **"Required asset not found"**
-   - Ensure `static_logo.jpeg` and `video_logo.mp4` exist in the `assets/` folder
+   - Ensure `static_logo.png` and `video_logo.mp4` exist in the `assets/` folder
 
 2. **"Video too short"**
    - Videos must be longer than the combined intro + outro duration
@@ -358,6 +360,16 @@ Enable detailed logging for troubleshooting:
 ## 🛑 Stopping the Processor
 
 Press `Ctrl+C` to gracefully stop the file watcher and exit the program.
+
+## Asset Preparation Utility
+
+If your static logo is a JPEG with a white background, convert it to a transparent PNG matching the processor expectation using:
+
+```bash
+python remove_background.py assets/static_logo1.jpeg assets/static_logo.png
+```
+
+If no arguments are provided, the script defaults to converting `assets/static_logo1.jpeg` to `assets/static_logo.png`.
 
 ## 📈 Performance Benchmarks
 

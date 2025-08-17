@@ -1,4 +1,4 @@
-moviepy
-ffmpeg-python
-watchdog
-psutil
+moviepy>=2.0.0,<2.1
+watchdog>=4,<5
+psutil>=5.9,<6
+Pillow>=10,<11

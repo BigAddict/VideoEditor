@@ -8,13 +8,17 @@
     },
     "logo_configuration": {
         "static_logo": {
-            "height": 100,
-            "position": [20, 20],
+            "file": "assets/static_logo.png",
+            "height": 50,
+            "width": 50,
+            "position": [15, 15],
             "opacity": 1.0,
             "scale_factor": 1.0
         },
         "animated_logo": {
-            "height": 100,
+            "file": "assets/video_logo.mp4",
+            "height": 70,
+            "width": 120,
             "position": "center",
             "bottom_margin": 120,
             "opacity": 1.0,
